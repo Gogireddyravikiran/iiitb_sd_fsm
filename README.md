@@ -11,7 +11,18 @@ To clone the Repository and download the Netlist files for Simulation, enter the
 ```
 $  sudo apt install -y git
 $  git clone https://github.com/Gogireddyravikiran/iiitb_sd_fsm
+$  cd iiitb_sd_fsm
 ```
-### Running the simulation
+For Post Layout simulation run the following commands.
+### Post layout simulation
+```
+$  iverilog -o sd_fsm sd_fsm.v sd_fsm_tb.v
+$  ./sd_fsm
+```
+To see the ouput waveform run the following commands 
+```
+$ ./sd_fsm
+$ gtkwave sd_fsm.vcd
+```
 
 
