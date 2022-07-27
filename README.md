@@ -25,7 +25,11 @@ $ ./sd_fsm
 $ gtkwave sd_fsm.vcd
 ```
 ### Sequence Detector Schematic
-```
+
 ![image](https://user-images.githubusercontent.com/110079770/181251319-57254d76-186c-4490-a19e-2428facf1718.png)
-```
+
+### Functional Simulation
+
+![image](https://user-images.githubusercontent.com/110079770/181252206-2a645809-c2cc-4d8a-adb9-218b9dda75ee.png)
+
 
