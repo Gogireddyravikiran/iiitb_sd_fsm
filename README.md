@@ -28,6 +28,9 @@ $ gtkwave sd_fsm.vcd
 
 ![image](https://user-images.githubusercontent.com/110079770/181257307-184f6c8b-5652-448f-bb94-62c3e6001dfc.png)
 
+![image](https://user-images.githubusercontent.com/110079770/181293333-3024d38c-ec1c-4e90-8b31-5f0466b9c4fa.png)
+
+
 ### Sequence Detector Schematic
 
 ![image](https://user-images.githubusercontent.com/110079770/181251319-57254d76-186c-4490-a19e-2428facf1718.png)
