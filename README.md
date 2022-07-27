@@ -32,7 +32,7 @@ $ gtkwave sd_fsm.vcd
 
 ![image](https://user-images.githubusercontent.com/110079770/181251319-57254d76-186c-4490-a19e-2428facf1718.png)
 
-### Simulation
+### Simulation Waveform
 
 ![image](https://user-images.githubusercontent.com/110079770/181252206-2a645809-c2cc-4d8a-adb9-218b9dda75ee.png)
 
