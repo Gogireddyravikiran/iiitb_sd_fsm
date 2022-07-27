@@ -24,5 +24,6 @@ To see the ouput waveform run the following commands
 $ ./sd_fsm
 $ gtkwave sd_fsm.vcd
 ```
+### Schematic
 
 
