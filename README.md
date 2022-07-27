@@ -4,7 +4,7 @@ Here I have implemented the Moore finite state machine sequence detector “1011
 case we need the extra state to represent the ouput.Here when the sequence is detected at the input the output will represent as a 1. Whereas the next state logic is dependent upon the present input also on the present state. Here I used “1011” as a pattern when the input sequence is detected as a 1011 then the we see output as 1. 
 Here I performed a overlapping sequence to detect the pattern “1011”.
 
-### Pre-Layout Simulation
+### Cloning my verilog files from my github repository
 
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal.
 
