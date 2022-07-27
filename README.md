@@ -14,7 +14,7 @@ $  git clone https://github.com/Gogireddyravikiran/iiitb_sd_fsm
 $  cd iiitb_sd_fsm
 ```
 For Post Layout simulation run the following commands.
-### Post layout simulation
+### Functional simulation
 ```
 $  iverilog -o sd_fsm sd_fsm.v sd_fsm_tb.v
 $  ./sd_fsm
