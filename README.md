@@ -26,6 +26,6 @@ $ gtkwave sd_fsm.vcd
 ```
 ### Sequence Detector Schematic
 <p align="center">
-<img width="800" height="500" src="C:\Users\Ravi Kiran\OneDrive\Desktop\images\Sequence Detector Schematic.jpg"
+![image](https://user-images.githubusercontent.com/110079770/181251319-57254d76-186c-4490-a19e-2428facf1718.png)
 </p>
 
