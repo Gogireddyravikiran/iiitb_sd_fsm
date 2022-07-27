@@ -2,7 +2,7 @@
 // fpga4student.com: FPGA projects, Verilog projects, VHDL projects
 // Verilog project: Verilog code for Sequence Detector using Moore FSM
 // Verilog Testbench for Sequence Detector using Moore FSM 
-module tb_Sequence_Detector_Moore_FSM_Verilog;
+module sd_fsm_tb;
 
  // Inputs
  reg sequence_in;
@@ -13,7 +13,7 @@ module tb_Sequence_Detector_Moore_FSM_Verilog;
  wire detector_out;
 
  // Instantiate the Sequence Detector using Moore FSM
- Sequence_Detector_MOORE_Verilog uut (
+ sd_fsm uut (
   .sequence_in(sequence_in), 
   .clock(clock), 
   .reset(reset), 
@@ -21,8 +21,11 @@ module tb_Sequence_Detector_Moore_FSM_Verilog;
  );
  initial begin
  clock = 0;
+  $dumpfile("sd_fsm.vcd");
+ $dumpvars(0);
  forever #5 clock = ~clock;
  end 
+ initial #200 $finish;  
  initial begin
   // Initialize Inputs
   sequence_in = 0;
@@ -39,5 +42,5 @@ module tb_Sequence_Detector_Moore_FSM_Verilog;
   // Add stimulus here
 
  end
-      
+
 endmodule
