@@ -7,5 +7,11 @@ Here I performed a overlapping sequence to detect the pattern “1011”.
 ### Pre-Layout Simulation
 
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal.
-git clone 
+
+```
+$  sudo apt install -y git
+$  git clone https://github.com/Gogireddyravikiran/iiitb_sd_fsm
+```
+### Running the simulation
+
 
