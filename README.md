@@ -1,1 +1,1 @@
-# iiitb_sd_fsm --- iiitb sequence detector(1011) using moore finite state machine
+# iiitb_sd_fsm --- sequence detector(1011) using moore finite state machine
