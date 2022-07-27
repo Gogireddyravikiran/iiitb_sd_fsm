@@ -24,6 +24,10 @@ To see the ouput waveform run the following commands
 $ ./sd_fsm
 $ gtkwave sd_fsm.vcd
 ```
+### Block Diagram of a Sequence Detector 
+
+![image](https://user-images.githubusercontent.com/110079770/181257307-184f6c8b-5652-448f-bb94-62c3e6001dfc.png)
+
 ### Sequence Detector Schematic
 
 ![image](https://user-images.githubusercontent.com/110079770/181251319-57254d76-186c-4490-a19e-2428facf1718.png)
