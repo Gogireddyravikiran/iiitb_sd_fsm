@@ -6,8 +6,8 @@ read_verilog iiitb_sd_fsm.v
 synth -top iiitb_sd_fsm
 
 # mapping to mycells.lib
-dfflibmap -liberty /Desktop/iiitb_sd_fsm/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-abc -liberty /Desktop/iiitb_sd_fsm/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty /home/gogireddyravikiranreddy1/Desktop/iiitb_sd_fsm/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /home/gogireddyravikiranreddy1/Desktop/iiitb_sd_fsm/lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 clean
 flatten
 # write synthesized design
