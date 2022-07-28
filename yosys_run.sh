@@ -11,4 +11,4 @@ abc -liberty /home/gogireddyravikiranreddy1/Desktop/iiitb_sd_fsm/lib/lib/sky130_
 clean
 flatten
 # write synthesized design
-write_verilog -assert iiitb_sd_fsm_synth.v
+write_verilog -noattr iiitb_sd_fsm_synth.v
