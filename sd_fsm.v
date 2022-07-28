@@ -1,4 +1,4 @@
-module sd_fsm(sequence_in,clock,reset,detector_out);
+module iiitb_sd_fsm(sequence_in,clock,reset,detector_out);
 input clock; // clock signal
 input reset; // reset input
 input sequence_in; // binary input
