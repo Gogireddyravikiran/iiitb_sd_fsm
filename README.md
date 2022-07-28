@@ -13,7 +13,7 @@ $  sudo apt install -y git
 $  git clone https://github.com/Gogireddyravikiran/iiitb_sd_fsm
 $  cd iiitb_sd_fsm
 ```
-For Post Layout simulation run the following commands.
+For Functional simulation run the following commands.
 ### Functional simulation
 ```
 $  iverilog -o sd_fsm sd_fsm.v sd_fsm_tb.v
