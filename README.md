@@ -40,4 +40,19 @@ $ gtkwave sd_fsm.vcd
 
 ![image](https://user-images.githubusercontent.com/110079770/181252206-2a645809-c2cc-4d8a-adb9-218b9dda75ee.png)
 
+## Contributors 
 
+- **GogiReddy Ravi Kiran Reddy** 
+- **Kunal Ghosh** 
+
+
+
+## Acknowledgments
+
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+
+## Contact Information
+
+- GogiReddy Ravi Kiran Reddy, Postgraduate Student, International Institute of Information Technology, Bangalore.
+- Email: gogireddyravikiranreddy1@gmail.com
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
