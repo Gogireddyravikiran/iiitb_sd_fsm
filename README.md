@@ -40,6 +40,20 @@ $ gtkwave sd_fsm.vcd
 
 ![image](https://user-images.githubusercontent.com/110079770/181252206-2a645809-c2cc-4d8a-adb9-218b9dda75ee.png)
 
+### Synthesizing Verilog Code
+#### About Yosys 
+##### This is a framework for RTL synthesis tools. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
+
+Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the yosys C++ code base.
+
+Yosys is free software licensed under the ISC license (a GPL compatible license that is similar in terms to the MIT license or the 2-clause BSD license).
+#####
+### Yosys Installing Commands 
+```
+sudo apt-get update
+sudo apt-get -y install yosys
+```
+
 ## Contributors 
 
 - **GogiReddy Ravi Kiran Reddy** 
