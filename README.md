@@ -53,7 +53,23 @@ Yosys is free software licensed under the ISC license (a GPL compatible license 
 sudo apt-get update
 sudo apt-get -y install yosys
 ```
+### Commands for Synthesizig the verilog code 
+```
+read_verilog iiitb_sd_fsm.v
 
+# generic synthesis
+synth -top iiitb_sd_fsm
+
+# mapping to mycells.lib
+dfflibmap -liberty /home/gogireddyravikiranreddy1/Desktop/iiitb_sd_fsm/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /home/gogireddyravikiranreddy1/Desktop/iiitb_sd_fsm/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+flatten
+
+# write synthesized design
+write_verilog -noattr iiitb_sd_fsm_synth.v
+
+```
 ## Contributors 
 
 - **GogiReddy Ravi Kiran Reddy** 
