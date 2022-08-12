@@ -70,6 +70,9 @@ flatten
 write_verilog -noattr iiitb_sd_fsm_synth.v
 
 ```
+# Gate level Simulation
+![image](https://user-images.githubusercontent.com/110079770/184317847-0cd052d7-97f2-45e6-b391-2ca74f033861.png)
+
 ## Contributors 
 
 - **GogiReddy Ravi Kiran Reddy** 
