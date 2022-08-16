@@ -70,7 +70,14 @@ flatten
 write_verilog -noattr iiitb_sd_fsm_synth.v
 
 ```
-# Gate level Simulation
+
+# Gate level Simulation Commands
+```
+iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 verilog_model/primitives.v verilog_model/sky130_fd_sc_hd.v iiitb_sd_fsm_synth.v iiitb_sd_fsm_tb.v
+./a.out --> For Generating the vcd file.
+gtkwave sd_fsm.vcd
+```
+# Gate level Simulation Waveform
 ![image](https://user-images.githubusercontent.com/110079770/184317847-0cd052d7-97f2-45e6-b391-2ca74f033861.png)
 
 ## Contributors 
