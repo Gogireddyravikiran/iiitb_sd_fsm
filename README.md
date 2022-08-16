@@ -50,8 +50,9 @@ Yosys is free software licensed under the ISC license (a GPL compatible license 
 #####
 ### Yosys Installing Commands 
 ```
-sudo apt-get update
-sudo apt-get -y install yosys
+git clone https://github.com/YosysHQ/yosys.git
+make
+sudo make install make test
 ```
 ### Commands for Synthesizig the verilog code 
 ```
