@@ -80,6 +80,11 @@ gtkwave sd_fsm.vcd
 # Gate level Simulation Waveform
 ![image](https://user-images.githubusercontent.com/110079770/184317847-0cd052d7-97f2-45e6-b391-2ca74f033861.png)
 
+# Observation on Gate Level Simulation Waveform
+```
+I observed that Pre Level Simulation and Post Level Simulation Waveforms are matched.
+```
+
 ## Contributors 
 
 - **GogiReddy Ravi Kiran Reddy** 
