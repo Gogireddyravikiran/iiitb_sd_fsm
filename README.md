@@ -99,10 +99,9 @@ write_verilog -noattr iiitb_sd_fsm_synth.v
      sky130_fd_sc_hd__o21ba_2        1
 ```
 # Synthesized Model
-```
+
 ![image](https://user-images.githubusercontent.com/110079770/184836574-d4e8436e-fec2-4e72-855f-f4b55c1177d6.png)
 
-```
 # Gate level Simulation Commands
 ```
 iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 verilog_model/primitives.v verilog_model/sky130_fd_sc_hd.v iiitb_sd_fsm_synth.v iiitb_sd_fsm_tb.v
