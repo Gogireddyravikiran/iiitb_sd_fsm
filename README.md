@@ -71,7 +71,38 @@ flatten
 write_verilog -noattr iiitb_sd_fsm_synth.v
 
 ```
+# Statistics 
+```
+ Printing statistics.
 
+=== iiitb_sd_fsm ===
+
+   Number of wires:                 19
+   Number of wire bits:             19
+   Number of public wires:          10
+   Number of public wire bits:      10
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 16
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a2bb2oi_2      1
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and3b_2        1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__dfrtp_2        3
+     sky130_fd_sc_hd__inv_2          3
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand3b_2       1
+     sky130_fd_sc_hd__nor2_2         1
+     sky130_fd_sc_hd__o211a_2        1
+     sky130_fd_sc_hd__o21ba_2        1
+```
+# Synthesized Model
+```
+![image](https://user-images.githubusercontent.com/110079770/184836574-d4e8436e-fec2-4e72-855f-f4b55c1177d6.png)
+
+```
 # Gate level Simulation Commands
 ```
 iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 verilog_model/primitives.v verilog_model/sky130_fd_sc_hd.v iiitb_sd_fsm_synth.v iiitb_sd_fsm_tb.v
