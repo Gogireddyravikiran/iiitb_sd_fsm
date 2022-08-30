@@ -376,6 +376,7 @@ run_routing
 
 ![image](https://user-images.githubusercontent.com/110079770/187443861-01522132-7365-4433-898b-d6458aeb702f.png)
 
+
 ### 11.1. Routing 
 
 ![image](https://user-images.githubusercontent.com/110079770/187444680-d6c2ddf0-50fc-4009-b1ac-3f7dd61ea263.png)
@@ -401,6 +402,7 @@ sky130_vsdinv _14_
 **Expanded version of sky130_vsdinv cell**
 
 ![image](https://user-images.githubusercontent.com/110079770/187446574-cedd1b67-3d89-410e-a25e-e59f75e5ec51.png)
+
 
 **12. Reports**
 
