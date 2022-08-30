@@ -1,3 +1,5 @@
+![Screenshot from 2022-08-15 17-17-44](https://user-images.githubusercontent.com/69398841/184629923-4325bf41-9446-4510-a93a-1fa72bdca850.png)
+
 # iiitb_sd_fsm --- sequence detector(10111) using moore finite state machine
 
 # Table of contents
