@@ -123,6 +123,11 @@ The gtkwave output for the netlist should match the output waveform for the RTL 
 I observed that Pre Level Simulation and Post Level Simulation Waveforms are matched.
 ```
 
+## **III. Physical Design from Netlist to GDSII**
+
+Physical design is process of transforming netlist into layout which is manufacture-able [GDS]. Physical design process is often referred as PnR (Place and Route). Main steps in physical design are placement of all logical cells, clock tree synthesis & routing. During this process of physical design timing, power, design & technology constraints have to be met. Further design might require being optimized w.r.t power, performance and area.
+
+
 ## Final Layout
 #### Openlane
 OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
@@ -175,7 +180,7 @@ $   sudo make install
 ```
 type **magic** terminal to check whether it installed succesfully or not. type **exit** to exit magic.
 
-**Generating Layout**
+**Generating Layout without including sky130_vsdinv cell**
 
 Open terminal in home directory
 ```
@@ -195,7 +200,7 @@ $   ./flow.tcl -design iiitb_sd_fsm
 To see the layout we use a tool called magic which we installed earlier.
 open terminal in home directory
 ```
-$   cd OpenLane/designs/iiitb_pwm_gen/run
+$   cd OpenLane/designs/iiitb_sd_fsm/run
 $   ls
 ```
 select most run directoy from list 
@@ -215,26 +220,138 @@ $   cd results/final/def
 update the highlited text with appropriate path
 
 ```
-$ magic -T /home/ravi/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read iiitb_sd_fsm.def &
+$ magic -T /home/ravi/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../../tmp/merged.lef def read iiitb_sd_fsm.def &
 ```
 
-layout will be open in new window
 #### layout
 
 ![image](https://user-images.githubusercontent.com/110079770/186617634-1572ed91-f4a6-4ef4-a76e-0c3fb63dd876.png)
 
-### including the custom cell ```sky130_vsdinv```.
-```printing stattistics```
+**Generating Layout including sky130_vsdinv cell**
 
-![statvsdinv](https://user-images.githubusercontent.com/110079770/187408987-ab67f43a-9a80-4a19-aaa5-66d14f4de885.jpg)
+## cloning vsdstdcelldesign
+![image](https://user-images.githubusercontent.com/110079770/187428747-42f21a1b-f9e0-4513-bd8c-b9659c51ebdf.png)
 
-### sky130_vsdinv cell in the layout
+![image](https://user-images.githubusercontent.com/110079770/187428964-47e49902-86f2-4b22-8e13-f4cf11999d78.png)
 
-![sky130_vsdinv](https://user-images.githubusercontent.com/110079770/187409269-ecf56acd-7d04-4a14-af9b-fda99d3ffb02.jpg)
+copy the sky130A.tech to vsdcelldesign directory and type the following command to see the inverter layout in magic tool.
+```
+magic -T sky130A.tech sky130A_inv.mag &
+```
+
+**layout of the inverter cell**
+![image](https://user-images.githubusercontent.com/110079770/187430507-2b58bfab-51c9-4ce8-a8ec-2512a39e41eb.png)
+
+**Generating the sky130_vsdinv.lef file**
+In tkcon terminal type the following command
+```
+lef write sky130_vsdinv.lef
+```
+![image](https://user-images.githubusercontent.com/110079770/187432194-96f62f6a-1a1b-4ad3-8051-5b8691e8f9ee.png)
+
+Move the ```sky130_fd_sc_hd__fast.lib```,```sky130_fd_sc_hd__slow.lib```,```sky130_fd_sc_hd__typical.lib```,```sky130_vsdinv.lef``` files to your design ```src``` folder.
+
+![image](https://user-images.githubusercontent.com/110079770/187434721-b6ed028b-d11d-49d8-9f1e-7669850ea7fb.png)
 
 
-## Future work:
-working on **GLS for post-layout netlist**.
+ Invoking openlane by following command.
+ ```
+ sudo make mount
+ ```
+![image](https://user-images.githubusercontent.com/110079770/187435635-40600f38-a170-42c2-a588-cb6c37309baf.png)
+Run the following commands.
+```
+$ ./flow.tcl -interactive
+% package require openlane 0.9
+% prep -design iiitb_sd_fsm
+These commands are used for reading the sky130_vsdinv.lef file
+% set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+% add_lefs -src $lefs
+```
+** Reading the design
+![image](https://user-images.githubusercontent.com/110079770/187437201-8fc0450d-a698-4113-bb07-cc7739bc63b6.png)
+** Include the following the commands in the flow **
+![image](https://user-images.githubusercontent.com/110079770/187438660-ebb10bd2-f258-4a20-b8c5-d722879026ca.png)
+
+**Run_synthesis**
+Type the following command to run synthesis
+```
+run_synthesis
+```
+![image](https://user-images.githubusercontent.com/110079770/187439015-10842717-996c-4828-a1bc-dc297aeb32c7.png)
+
+Printing Statistics
+**Pre Synthesis
+![image](https://user-images.githubusercontent.com/110079770/187440049-2fa68e81-0cf4-422c-9b34-f6ce8a853d2e.png)
+
+**Post Synthesis
+![image](https://user-images.githubusercontent.com/110079770/187439774-d9e9be3f-a339-4160-b340-261fa5bf1835.png)
+
+**Floorplan**
+Type the following command to run Floorplan
+```
+run_floorplan
+```
+![image](https://user-images.githubusercontent.com/110079770/187440482-eda3788f-8d89-4b45-a3c9-4b2572b32bd0.png)
+
+### Floorplanning
+![image](https://user-images.githubusercontent.com/110079770/187441458-e5c844b0-e7d4-41c0-be04-c99cd7b54f7e.png)
+
+**Placement**
+Type the following command to run placement
+```
+run_placement
+```
+![image](https://user-images.githubusercontent.com/110079770/187442337-2f2f9caf-9fe2-4573-86e1-942e9ed2f538.png)
+
+### placement
+![image](https://user-images.githubusercontent.com/110079770/187443047-0d23f760-d020-41f5-ab41-1b5c880db491.png)
+
+**Routing**
+Type the following command to run placement
+```
+run_routing
+```
+![image](https://user-images.githubusercontent.com/110079770/187443861-01522132-7365-4433-898b-d6458aeb702f.png)
+
+### Routing 
+![image](https://user-images.githubusercontent.com/110079770/187444680-d6c2ddf0-50fc-4009-b1ac-3f7dd61ea263.png)
+
+![image](https://user-images.githubusercontent.com/110079770/187444869-01548792-0d75-4185-862a-ccff8cf25487.png)
+
+In tkcon terminal type the following command to know whether the cell is present or not
+```getcell sky130_vsdinv
+```
+
+![image](https://user-images.githubusercontent.com/110079770/187445677-f2093f38-61f2-4d1f-b1e1-7bca87b722c0.png)
+
+**One sky130_vsdinv cell is present in the design**
+```
+sky130_vsdinv _14_ 
+```
+
+**Identifying the sky130_vsdinv cell**
+
+![image](https://user-images.githubusercontent.com/110079770/187446117-77ff1c12-1548-4919-bc83-4b356fda5ddb.png)
+
+**Expanded version of sky130_vsdinv cell**
+
+![image](https://user-images.githubusercontent.com/110079770/187446574-cedd1b67-3d89-410e-a25e-e59f75e5ec51.png)
+
+
+
+## References
+ 
+ [1] VLSI System Design: https://www.vlsisystemdesign.com/
+ 
+ [2] SkyWater SKY130 PDK: https://skywater-pdk.readthedocs.io/en/main/contents/libraries/foundry-provided.html
+ 
+ [3] RTL Design using Verilog with Sky130 Technology: https://www.vsdiat.com/dashboard
+ 
+ [4] Openlane - SKY130: https://github.com/The-OpenROAD-Project/OpenLane
+ 
+ [5] Magic Installation: https://github.com/RTimothyEdwards/magic
+ 
 
 ## Contributors 
 
