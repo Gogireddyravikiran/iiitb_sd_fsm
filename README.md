@@ -223,6 +223,10 @@ layout will be open in new window
 
 ![image](https://user-images.githubusercontent.com/110079770/186617634-1572ed91-f4a6-4ef4-a76e-0c3fb63dd876.png)
 
+
+![statvsdinv](https://user-images.githubusercontent.com/110079770/187408987-ab67f43a-9a80-4a19-aaa5-66d14f4de885.jpg)
+
+
 ## Future work:
 working on **GLS for post-layout netlist**.
 
