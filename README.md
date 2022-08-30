@@ -351,7 +351,21 @@ run_placement
 
 ![image](https://user-images.githubusercontent.com/110079770/187443047-0d23f760-d020-41f5-ab41-1b5c880db491.png)
 
-**10. Routing**
+**10. CTS**
+Type the following command to run placement
+```
+run_cts
+```
+## cts reports
+
+![image](https://user-images.githubusercontent.com/110079770/187494237-864cbb0c-5945-42e3-a7a9-61be43f5f5fc.png)
+
+![image](https://user-images.githubusercontent.com/110079770/187494302-f64171b9-a7b1-4931-95eb-e77097ccb626.png)
+
+![image](https://user-images.githubusercontent.com/110079770/187494407-d74fef68-aca9-49d0-897a-342349a1bbea.png)
+
+
+**11. Routing**
 
 ### Type the following command to run placement
 ```
@@ -360,7 +374,7 @@ run_routing
 
 ![image](https://user-images.githubusercontent.com/110079770/187443861-01522132-7365-4433-898b-d6458aeb702f.png)
 
-### 10.1. Routing 
+### 11.1. Routing 
 
 ![image](https://user-images.githubusercontent.com/110079770/187444680-d6c2ddf0-50fc-4009-b1ac-3f7dd61ea263.png)
 
