@@ -1,8 +1,8 @@
 # iiitb_sd_fsm --- sequence detector(10111) using moore finite state machine
 
 # Table of contents
- - [1.Sequence Detector(10111) Using Moore State Machine](#1-Sequence-Detector(10111)-Using-Moore-State-Machine)
- - [2.Block Diagram of a Sequence Detector](#2.Block-Diagram-of-a-Sequence-Detector)
+ - [1.Sequence Detector(10111) Using Moore State Machine](#1-Sequence-Detector-(10111)-Using-Moore-State-Machine)
+ - [2.Block Diagram of a Sequence Detector](#2-Block-Diagram-of-a-Sequence-Detector)
  - [3.State Machine Diagram](#3.State-Machine-Diagram)
  - [4.Sequence Detector Schematic](#4.Sequence-Detector-Schematic)
  - [5.Simulation Waveform](#5.Simulation-Waveform)
