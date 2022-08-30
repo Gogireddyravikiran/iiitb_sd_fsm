@@ -361,6 +361,17 @@ sky130_vsdinv _14_
 
 ![image](https://user-images.githubusercontent.com/110079770/187446574-cedd1b67-3d89-410e-a25e-e59f75e5ec51.png)
 
+**Reports**
+
+![image](https://user-images.githubusercontent.com/110079770/187455475-538f58d1-2cb8-4377-b05f-3b1d103e50aa.png)
+
+![image](https://user-images.githubusercontent.com/110079770/187456257-ad692330-fbb1-4448-a8bd-430dc10182b4.png)
+
+![image](https://user-images.githubusercontent.com/110079770/187456396-e9d6aea3-7992-4d06-a242-9a2d59c102c6.png)
+
+![image](https://user-images.githubusercontent.com/110079770/187456496-96350370-d1d9-4956-ad99-be18c53402c0.png)
+
+![image](https://user-images.githubusercontent.com/110079770/187456778-0484fe16-4ddc-4535-a11e-55043fd40052.png)
 
 
 ## References
