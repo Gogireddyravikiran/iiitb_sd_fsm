@@ -195,14 +195,15 @@ $   sudo make mount
 $   ./flow.tcl -design iiitb_sd_fsm
 ```
 ![image](https://user-images.githubusercontent.com/110079770/186616596-225a7778-462f-48ca-be30-34dfcfc58466.png)
+
 To see the layout we use a tool called magic which we installed earlier.
+
 open terminal in home directory
+
 ```
 $   cd OpenLane/designs/iiitb_sd_fsm/run
 $   ls
 ```
-select most run directoy from list 
-
 
 example:
 ![image](https://user-images.githubusercontent.com/110079770/186617049-be127141-995b-4d80-8a12-4b6d3e251ee5.png)
@@ -225,7 +226,7 @@ $ magic -T /home/ravi/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech
 
 ![image](https://user-images.githubusercontent.com/110079770/186617634-1572ed91-f4a6-4ef4-a76e-0c3fb63dd876.png)
 
-**Generating Layout including sky130_vsdinv cell**
+## Generating Layout including sky130_vsdinv cell 
 
 ## cloning vsdstdcelldesign
 ![image](https://user-images.githubusercontent.com/110079770/187428747-42f21a1b-f9e0-4513-bd8c-b9659c51ebdf.png)
