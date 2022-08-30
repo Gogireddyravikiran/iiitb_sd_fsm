@@ -1,22 +1,22 @@
 # iiitb_sd_fsm --- sequence detector(10111) using moore finite state machine
 
 # Table of contents
- -[1.Sequence Detector(10111) Using Moore State Machine](#1.Sequence-Detector(10111)-Using-Moore-State-Machine)
- -[2.Block Diagram of a Sequence Detector](#2.Block-Diagram-of-a-Sequence-Detector)
- -[3.State Machine Diagram](#3.State-Machine-Diagram)
- -[4.Sequence Detector Schematic](#4.Sequence-Detector-Schematic)
- -[5.Simulation Waveform](#5.Simulation-Waveform)
- -[6.Synthesizing Verilog Code](#6.Synthesizing-Verilog-Code)
-   -[6.1 About Yosys](#6.1-About-Yosys)
-   -[6.2 Statistics](#6.2-Statistics)
-   -[6.3. Synthesized Model](#6.3.-Synthesized Model)
-   -[6.4. GATE LEVEL SIMULATION(GLS)](#6.4.-GATE-LEVEL-SIMULATION(GLS))
-   -[6.5. Gate level Simulation Waveform](#6.5.-Gate-level-Simulation-Waveform)
- -[7. Physical Design from Netlist to GDSII](#7.-Physical-Design-from-Netlist-to-GDSII)
-   -[7.1. Physical design flow](#7.1.-Physical-design-flow)
-   -[7.2. Openlane](#7.2.-Openlane)
-   -[7.3. Magic](#7.3.-Magic)
-   -[7.4. layout](#7.4.-layout)
+ - [1.Sequence Detector(10111) Using Moore State Machine](#1.Sequence-Detector(10111)-Using-Moore-State-Machine)
+ - [2.Block Diagram of a Sequence Detector](#2.Block-Diagram-of-a-Sequence-Detector)
+ - [3.State Machine Diagram](#3.State-Machine-Diagram)
+ - [4.Sequence Detector Schematic](#4.Sequence-Detector-Schematic)
+ - [5.Simulation Waveform](#5.Simulation-Waveform)
+ - [6.Synthesizing Verilog Code](#6.Synthesizing-Verilog-Code)
+   - [6.1 About Yosys](#6.1-About-Yosys)
+   - [6.2 Statistics](#6.2-Statistics)
+   - [6.3. Synthesized Model](#6.3.-Synthesized Model)
+   - [6.4. GATE LEVEL SIMULATION(GLS)](#6.4.-GATE-LEVEL-SIMULATION(GLS))
+   - [6.5. Gate level Simulation Waveform](#6.5.-Gate-level-Simulation-Waveform)
+ - [7. Physical Design from Netlist to GDSII](#7.-Physical-Design-from-Netlist-to-GDSII)
+   - [7.1. Physical design flow](#7.1.-Physical-design-flow)
+   - [7.2. Openlane](#7.2.-Openlane)
+   - [7.3. Magic](#7.3.-Magic)
+   - [7.4. layout](#7.4.-layout)
    
    
  
