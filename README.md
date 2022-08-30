@@ -1,5 +1,26 @@
 # iiitb_sd_fsm --- sequence detector(10111) using moore finite state machine
 
+# Table of contents
+ -[1.Sequence Detector(10111) Using Moore State Machine](#1.Sequence-Detector(10111)-Using-Moore-State-Machine)
+ -[2.Block Diagram of a Sequence Detector](#2.Block-Diagram-of-a-Sequence-Detector)
+ -[3.State Machine Diagram](#3.State-Machine-Diagram)
+ -[4.Sequence Detector Schematic](#4.Sequence-Detector-Schematic)
+ -[5.Simulation Waveform](#5.Simulation-Waveform)
+ -[6.Synthesizing Verilog Code](#6.Synthesizing-Verilog-Code)
+   -[6.1 About Yosys](#6.1-About-Yosys)
+   -[6.2 Statistics](#6.2-Statistics)
+   -[6.3. Synthesized Model](#6.3.-Synthesized Model)
+   -[6.4. GATE LEVEL SIMULATION(GLS)](#6.4.-GATE-LEVEL-SIMULATION(GLS))
+   -[6.5. Gate level Simulation Waveform](#6.5.-Gate-level-Simulation-Waveform)
+ -[7. Physical Design from Netlist to GDSII](#7.-Physical-Design-from-Netlist-to-GDSII)
+   -[7.1. Physical design flow](#7.1.-Physical-design-flow)
+   -[7.2. Openlane](#7.2.-Openlane)
+   -[7.3. Magic](#7.3.-Magic)
+   -[7.4. layout](#7.4.-layout)
+   
+   
+ 
+   
 ## 1.Sequence Detector(10111) Using Moore State Machine
 
    -Here I have implemented the Moore finite state machine sequence detector “10111”. Where the Moore finite state machine keeps detecting the digital input and the output of the fsm goes only high when the sequence is detected I.e., “10111”. In Moore fsm output depends only on the present state logic but not on the present input So in this 
@@ -25,24 +46,24 @@ To see the ouput waveform run the following commands
 $ ./sd_fsm
 $ gtkwave sd_fsm.vcd
 ```
-### 2.Block Diagram of a Sequence Detector 
+## 2.Block Diagram of a Sequence Detector 
 
 ![image](https://user-images.githubusercontent.com/110079770/181257307-184f6c8b-5652-448f-bb94-62c3e6001dfc.png)
 
-### 3.State Machine Diagram
+## 3.State Machine Diagram
 
 ![image](https://user-images.githubusercontent.com/110079770/181293333-3024d38c-ec1c-4e90-8b31-5f0466b9c4fa.png)
 
-### 4.Sequence Detector Schematic
+## 4.Sequence Detector Schematic
 
 ![image](https://user-images.githubusercontent.com/110079770/181251319-57254d76-186c-4490-a19e-2428facf1718.png)
 
-### 5.Simulation Waveform
+## 5.Simulation Waveform
 
 ![image](https://user-images.githubusercontent.com/110079770/187498122-39662fdc-dc70-46f3-aa53-e641c09b8493.png)
 
-# 6 Synthesizing Verilog Code
-## 6.1 About Yosys 
+## 6.Synthesizing Verilog Code
+### 6.1 About Yosys 
 #### This is a framework for RTL synthesis tools. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 
 Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the yosys C++ code base.
@@ -72,7 +93,7 @@ flatten
 write_verilog -noattr iiitb_sd_fsm_synth.v
 
 ```
-## 6.2 Statistics 
+### 6.2 Statistics 
 ```
  Printing statistics.
 
@@ -99,23 +120,23 @@ write_verilog -noattr iiitb_sd_fsm_synth.v
      sky130_fd_sc_hd__o211a_2        1
      sky130_fd_sc_hd__o21ba_2        1
 ```
-## 6.3. Synthesized Model
+### 6.3. Synthesized Model
 
 ![image](https://user-images.githubusercontent.com/110079770/184836574-d4e8436e-fec2-4e72-855f-f4b55c1177d6.png)
 
 Now the synthesized netlist is written in "iiitb_sd_fsm_synth.v" file.
 
-# 6.4. GATE LEVEL SIMULATION(GLS)
+### 6.4. GATE LEVEL SIMULATION(GLS)
 GLS is generating the simulation output by running test bench with netlist file generated from synthesis as design under test. Netlist is logically same as RTL code, therefore, same test bench can be used for it.We perform this to verify logical correctness of the design after synthesizing it. Also ensuring the timing of the design is met.
 
-## Gate level Simulation Commands
+### Gate level Simulation Commands
 ```
 iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 verilog_model/primitives.v verilog_model/sky130_fd_sc_hd.v iiitb_sd_fsm_synth.v iiitb_sd_fsm_tb.v
 ./a.out --> For Generating the vcd file.
 gtkwave sd_fsm.vcd
 ```
 
-## 6.5. Gate level Simulation Waveform
+### 6.5. Gate level Simulation Waveform
 
 ![image](https://user-images.githubusercontent.com/110079770/184317847-0cd052d7-97f2-45e6-b391-2ca74f033861.png)
 
@@ -126,11 +147,11 @@ The gtkwave output for the netlist should match the output waveform for the RTL 
 I observed that Pre Level Simulation and Post Level Simulation Waveforms are matched.
 ```
 
-# 7. Physical Design from Netlist to GDSII
+## 7. Physical Design from Netlist to GDSII
 
 Physical design is process of transforming netlist into layout which is manufacture-able [GDS]. Physical design process is often referred as PnR (Place and Route). Main steps in physical design are placement of all logical cells, clock tree synthesis & routing. During this process of physical design timing, power, design & technology constraints have to be met. Further design might require being optimized w.r.t power, performance and area.
 
-**7.1. Physical design flow**
+### 7.1. Physical design flow
 
 ![image](https://user-images.githubusercontent.com/110079770/187488471-0b9b639a-e75e-4b4d-8ce9-be046b5ca7d8.png)
 
@@ -154,7 +175,7 @@ Below are the stages and the respective tools that are called by openlane for th
 - GDSII Generation
   - Streaming out the final GDSII layout file from the routed def ([Magic](https://github.com/RTimothyEdwards/magic)).
  
-## 7.2. Openlane
+### 7.2. Openlane
 OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
 
 ### Installation instructions 
@@ -175,8 +196,9 @@ $ sudo make test
 ```
 It takes approximate time of 5min to complete. After 43 steps, if it ended with saying **Basic test passed** then open lane installed succesfully.
 
- **7.3. Magic**
-      -Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow.
+ ### 7.3. Magic
+ 
+   - Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow.
 
        -More about magic at http://opencircuitdesign.com/magic/index.html
 
@@ -248,7 +270,7 @@ update the highlited text with appropriate path
 $ magic -T /home/ravi/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../../tmp/merged.lef def read iiitb_sd_fsm.def &
 ```
 
-**7.4. layout**
+### 7.4. layout
 
 ![image](https://user-images.githubusercontent.com/110079770/186617634-1572ed91-f4a6-4ef4-a76e-0c3fb63dd876.png)
 
