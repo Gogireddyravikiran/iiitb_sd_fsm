@@ -10,16 +10,31 @@
    - [6.1 About Yosys](#61-About-Yosys)
    - [6.2 Statistics](#62-Statistics)
    - [6.3. Synthesized Model](#63-Synthesized-Model)
-   - [6.4. GATE LEVEL SIMULATION(GLS)](#6.4.-GATE-LEVEL-SIMULATION(GLS))
-   - [6.5. Gate level Simulation Waveform](#6.5.-Gate-level-Simulation-Waveform)
- - [7. Physical Design from Netlist to GDSII](#7.-Physical-Design-from-Netlist-to-GDSII)
-   - [7.1. Physical design flow](#7.1.-Physical-design-flow)
-   - [7.2. Openlane](#7.2.-Openlane)
-   - [7.3. Magic](#7.3.-Magic)
-   - [7.4. layout](#7.4.-layout)
+   - [6.4. GATE LEVEL SIMULATION(GLS)](#64-GATE-LEVEL-SIMULATION(GLS))
+   - [6.5. Gate level Simulation Waveform](#65-Gate-level-Simulation-Waveform)
+ - [7. Physical Design from Netlist to GDSII](#7-Physical-Design-from-Netlist-to-GDSII)
+   - [7.1. Physical design flow](#71-Physical-design-flow)
+   - [7.2. Openlane](#72-Openlane)
+   - [7.3. Magic](#73-Magic)
+   - [7.4. layout](#74-layout)
+   - [7.5. Generating Layout including sky130_vsdinv cell](#75-Generating-Layout-including-sky130_vsdinv-cell)
+   - [7.6. layout of the inverter cell](#76-layout-of-the-inverter-cell)
+   - [7.7. Run_synthesis](#77-Run_synthesis)
+   - [7.8. Pre Synthesis stats](#78-Pre-Synthesis-stats)
+   - [7.9. Post Synthesis stats](#79-Post-Synthesis-stats)
+ - [8. Floorplan](#8-Floorplan)
+   - [8.1. Floorplanning](#81-Floorplanning)
+ - [9. Placement](#9-Placement)
+ - [10. CTS(clock tree synthesis)](#10-CTS(clock tree synthesis))
+ - [11. Routing](#11-Routing)
+   - [11.1. Routing](#111-Routing)
+ - [12. Reports](#12-Reports)
+ - [13. References](#13-References)
+ - [14. Contributors](#14-Contributors)
+ - [15. Acknowledgments](#15-Acknowledgments)
+ - [16. Contact Information](#16-Contact-Information)
    
    
- 
    
 ## 1. Sequence Detector(10111) Using Moore State Machine
 
@@ -274,7 +289,7 @@ $ magic -T /home/ravi/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech
 
 ![image](https://user-images.githubusercontent.com/110079770/186617634-1572ed91-f4a6-4ef4-a76e-0c3fb63dd876.png)
 
-**7.5. Generating Layout including sky130_vsdinv cell** 
+### 7.5. Generating Layout including sky130_vsdinv cell
 
 ## cloning vsdstdcelldesign
 ![image](https://user-images.githubusercontent.com/110079770/187428747-42f21a1b-f9e0-4513-bd8c-b9659c51ebdf.png)
@@ -286,7 +301,7 @@ copy the sky130A.tech to vsdcelldesign directory and type the following command 
 magic -T sky130A.tech sky130A_inv.mag &
 ```
 
-**7.6. layout of the inverter cell**
+### 7.6. layout of the inverter cell
 
 ![image](https://user-images.githubusercontent.com/110079770/187430507-2b58bfab-51c9-4ce8-a8ec-2512a39e41eb.png)
 
@@ -328,7 +343,7 @@ These commands are used for reading the sky130_vsdinv.lef file
 
 ![image](https://user-images.githubusercontent.com/110079770/187438660-ebb10bd2-f258-4a20-b8c5-d722879026ca.png)
 
-**7.7. Run_synthesis**
+### 7.7. Run_synthesis
 
 ### Type the following command to run synthesis
 ```
@@ -339,15 +354,15 @@ run_synthesis
 
 Printing Statistics
 
-**7.8. Pre Synthesis stats
+### 7.8. Pre Synthesis stats
 
 ![image](https://user-images.githubusercontent.com/110079770/187440049-2fa68e81-0cf4-422c-9b34-f6ce8a853d2e.png)
 
-**7.9. Post Synthesis stats
+### 7.9. Post Synthesis stats
 
 ![image](https://user-images.githubusercontent.com/110079770/187439774-d9e9be3f-a339-4160-b340-261fa5bf1835.png)
 
-**8. Floorplan**
+## 8. Floorplan
 
 ### Type the following command to run Floorplan
 
@@ -356,11 +371,11 @@ run_floorplan
 ```
 ![image](https://user-images.githubusercontent.com/110079770/187440482-eda3788f-8d89-4b45-a3c9-4b2572b32bd0.png)
 
-**8.1. Floorplanning
+### 8.1. Floorplanning
 
 ![image](https://user-images.githubusercontent.com/110079770/187441458-e5c844b0-e7d4-41c0-be04-c99cd7b54f7e.png)
 
-**9. Placement**
+## 9. Placement
 
 Type the following command to run placement
 ```
@@ -373,7 +388,7 @@ run_placement
 
 ![image](https://user-images.githubusercontent.com/110079770/187443047-0d23f760-d020-41f5-ab41-1b5c880db491.png)
 
-**10. CTS**
+## 10. CTS(clock tree synthesis)
 Type the following command to run placement
 ```
 run_cts
@@ -389,7 +404,7 @@ run_cts
 ![image](https://user-images.githubusercontent.com/110079770/187496829-c6f203e8-7496-49b8-bc74-7e8d8ebca35e.png)
 
 
-**11. Routing**
+## 11. Routing
 
 ### Type the following command to run placement
 ```
@@ -426,7 +441,7 @@ sky130_vsdinv _14_
 ![image](https://user-images.githubusercontent.com/110079770/187446574-cedd1b67-3d89-410e-a25e-e59f75e5ec51.png)
 
 
-**12. Reports**
+## 12. Reports
 
 ![image](https://user-images.githubusercontent.com/110079770/187455475-538f58d1-2cb8-4377-b05f-3b1d103e50aa.png)
 
