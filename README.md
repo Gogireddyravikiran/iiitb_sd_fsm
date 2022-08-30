@@ -41,9 +41,9 @@ $ gtkwave sd_fsm.vcd
 
 ![image](https://user-images.githubusercontent.com/110079770/187498122-39662fdc-dc70-46f3-aa53-e641c09b8493.png)
 
-### 6 Synthesizing Verilog Code
-#### 6.1 About Yosys 
-##### This is a framework for RTL synthesis tools. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
+# 6 Synthesizing Verilog Code
+## 6.1 About Yosys 
+#### This is a framework for RTL synthesis tools. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 
 Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the yosys C++ code base.
 
@@ -72,7 +72,7 @@ flatten
 write_verilog -noattr iiitb_sd_fsm_synth.v
 
 ```
-# 6.2 Statistics 
+## 6.2 Statistics 
 ```
  Printing statistics.
 
@@ -99,34 +99,34 @@ write_verilog -noattr iiitb_sd_fsm_synth.v
      sky130_fd_sc_hd__o211a_2        1
      sky130_fd_sc_hd__o21ba_2        1
 ```
-# 6.3. Synthesized Model
+## 6.3. Synthesized Model
 
 ![image](https://user-images.githubusercontent.com/110079770/184836574-d4e8436e-fec2-4e72-855f-f4b55c1177d6.png)
 
 Now the synthesized netlist is written in "iiitb_sd_fsm_synth.v" file.
 
-### 6.4. GATE LEVEL SIMULATION(GLS)
+# 6.4. GATE LEVEL SIMULATION(GLS)
 GLS is generating the simulation output by running test bench with netlist file generated from synthesis as design under test. Netlist is logically same as RTL code, therefore, same test bench can be used for it.We perform this to verify logical correctness of the design after synthesizing it. Also ensuring the timing of the design is met.
 
-# Gate level Simulation Commands
+## Gate level Simulation Commands
 ```
 iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 verilog_model/primitives.v verilog_model/sky130_fd_sc_hd.v iiitb_sd_fsm_synth.v iiitb_sd_fsm_tb.v
 ./a.out --> For Generating the vcd file.
 gtkwave sd_fsm.vcd
 ```
 
-# 6.5. Gate level Simulation Waveform
+## 6.5. Gate level Simulation Waveform
 
 ![image](https://user-images.githubusercontent.com/110079770/184317847-0cd052d7-97f2-45e6-b391-2ca74f033861.png)
 
 The gtkwave output for the netlist should match the output waveform for the RTL design file. As netlist and design code have same set of inputs and outputs, we can use the same testbench and compare the waveforms.
 
-# Observation on Gate Level Simulation Waveform
+## Observation on Gate Level Simulation Waveform
 ```
 I observed that Pre Level Simulation and Post Level Simulation Waveforms are matched.
 ```
 
-## ** 7. Physical Design from Netlist to GDSII**
+# 7. Physical Design from Netlist to GDSII
 
 Physical design is process of transforming netlist into layout which is manufacture-able [GDS]. Physical design process is often referred as PnR (Place and Route). Main steps in physical design are placement of all logical cells, clock tree synthesis & routing. During this process of physical design timing, power, design & technology constraints have to be met. Further design might require being optimized w.r.t power, performance and area.
 
@@ -154,10 +154,10 @@ Below are the stages and the respective tools that are called by openlane for th
 - GDSII Generation
   - Streaming out the final GDSII layout file from the routed def ([Magic](https://github.com/RTimothyEdwards/magic)).
  
-#### 7.2. Openlane
+## 7.2. Openlane
 OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
 
-#### Installation instructions 
+### Installation instructions 
 ```
 $   apt install -y build-essential python3 python3-venv python3-pip
 ```
