@@ -127,6 +127,9 @@ I observed that Pre Level Simulation and Post Level Simulation Waveforms are mat
 
 Physical design is process of transforming netlist into layout which is manufacture-able [GDS]. Physical design process is often referred as PnR (Place and Route). Main steps in physical design are placement of all logical cells, clock tree synthesis & routing. During this process of physical design timing, power, design & technology constraints have to be met. Further design might require being optimized w.r.t power, performance and area.
 
+**Physical design flow**
+![image](https://user-images.githubusercontent.com/110079770/187488471-0b9b639a-e75e-4b4d-8ce9-be046b5ca7d8.png)
+
 
 ## Final Layout
 #### Openlane
