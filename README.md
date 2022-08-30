@@ -21,7 +21,7 @@
    
  
    
-## 1.Sequence Detector(10111) Using Moore State Machine
+## 1. Sequence Detector(10111) Using Moore State Machine
 
    -Here I have implemented the Moore finite state machine sequence detector “10111”. Where the Moore finite state machine keeps detecting the digital input and the output of the fsm goes only high when the sequence is detected I.e., “10111”. In Moore fsm output depends only on the present state logic but not on the present input So in this 
    -case we need the extra state to represent the ouput.Here when the sequence is detected at the input the output will represent as a 1. Whereas the next state logic is dependent upon the present input also on the present state. Here I used “10111” as a pattern when the input sequence is detected as a 10111 then the we see output as 1. 
@@ -50,19 +50,19 @@ $ gtkwave sd_fsm.vcd
 
 ![image](https://user-images.githubusercontent.com/110079770/181257307-184f6c8b-5652-448f-bb94-62c3e6001dfc.png)
 
-## 3.State Machine Diagram
+## 3. State Machine Diagram
 
 ![image](https://user-images.githubusercontent.com/110079770/181293333-3024d38c-ec1c-4e90-8b31-5f0466b9c4fa.png)
 
-## 4.Sequence Detector Schematic
+## 4. Sequence Detector Schematic
 
 ![image](https://user-images.githubusercontent.com/110079770/181251319-57254d76-186c-4490-a19e-2428facf1718.png)
 
-## 5.Simulation Waveform
+## 5. Simulation Waveform
 
 ![image](https://user-images.githubusercontent.com/110079770/187498122-39662fdc-dc70-46f3-aa53-e641c09b8493.png)
 
-## 6.Synthesizing Verilog Code
+## 6. Synthesizing Verilog Code
 ### 6.1 About Yosys 
 #### This is a framework for RTL synthesis tools. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 
