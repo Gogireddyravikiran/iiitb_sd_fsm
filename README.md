@@ -9,7 +9,7 @@
  - [6.Synthesizing Verilog Code](#6-Synthesizing-Verilog-Code)
    - [6.1 About Yosys](#61-About-Yosys)
    - [6.2 Statistics](#62-Statistics)
-   - [6.3. Synthesized Model](#63-Synthesized Model)
+   - [6.3. Synthesized Model](#63-Synthesized-Model)
    - [6.4. GATE LEVEL SIMULATION(GLS)](#6.4.-GATE-LEVEL-SIMULATION(GLS))
    - [6.5. Gate level Simulation Waveform](#6.5.-Gate-level-Simulation-Waveform)
  - [7. Physical Design from Netlist to GDSII](#7.-Physical-Design-from-Netlist-to-GDSII)
