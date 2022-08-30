@@ -25,7 +25,7 @@
  - [8. Floorplan](#8-Floorplan)
    - [8.1. Floorplanning](#81-Floorplanning)
  - [9. Placement](#9-Placement)
- - [10. CTS(clock tree synthesis)](#10-CTS(clock tree synthesis))
+ - [10. CTS(clock tree synthesis)](#10-CTS(clock-tree-synthesis))
  - [11. Routing](#11-Routing)
    - [11.1. Routing](#111-Routing)
  - [12. Reports](#12-Reports)
