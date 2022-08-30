@@ -113,6 +113,7 @@ gtkwave sd_fsm.vcd
 ```
 
 # Gate level Simulation Waveform
+
 ![image](https://user-images.githubusercontent.com/110079770/184317847-0cd052d7-97f2-45e6-b391-2ca74f033861.png)
 
 The gtkwave output for the netlist should match the output waveform for the RTL design file. As netlist and design code have same set of inputs and outputs, we can use the same testbench and compare the waveforms.
@@ -239,13 +240,17 @@ magic -T sky130A.tech sky130A_inv.mag &
 ```
 
 **layout of the inverter cell**
+
 ![image](https://user-images.githubusercontent.com/110079770/187430507-2b58bfab-51c9-4ce8-a8ec-2512a39e41eb.png)
 
 **Generating the sky130_vsdinv.lef file**
+
 In tkcon terminal type the following command
+
 ```
 lef write sky130_vsdinv.lef
 ```
+
 ![image](https://user-images.githubusercontent.com/110079770/187432194-96f62f6a-1a1b-4ad3-8051-5b8691e8f9ee.png)
 
 Move the ```sky130_fd_sc_hd__fast.lib```,```sky130_fd_sc_hd__slow.lib```,```sky130_fd_sc_hd__typical.lib```,```sky130_vsdinv.lef``` files to your design ```src``` folder.
@@ -269,6 +274,7 @@ These commands are used for reading the sky130_vsdinv.lef file
 % add_lefs -src $lefs
 ```
 ** Reading the design
+
 ![image](https://user-images.githubusercontent.com/110079770/187437201-8fc0450d-a698-4113-bb07-cc7739bc63b6.png)
 
 **Include the following the commands in the flow **
