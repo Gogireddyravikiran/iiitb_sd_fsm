@@ -16,8 +16,7 @@ $  cd iiitb_sd_fsm
 For Functional simulation run the following commands.
 ### Functional simulation
 ```
-$  iverilog -o sd_fsm sd_fsm.v sd_fsm_tb.v
-$  ./sd_fsm
+$  iverilog -o iiitb_sd_fsm iiitb_sd_fsm.v iiitb_sd_fsm_tb.v
 ```
 To see the ouput waveform run the following commands 
 ```
@@ -132,7 +131,6 @@ Physical design is process of transforming netlist into layout which is manufact
 #### Openlane
 OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
 
-more at https://github.com/The-OpenROAD-Project/OpenLane
 #### Installation instructions 
 ```
 $   apt install -y build-essential python3 python3-venv python3-pip
@@ -259,6 +257,7 @@ Move the ```sky130_fd_sc_hd__fast.lib```,```sky130_fd_sc_hd__slow.lib```,```sky1
  sudo make mount
  ```
 ![image](https://user-images.githubusercontent.com/110079770/187435635-40600f38-a170-42c2-a588-cb6c37309baf.png)
+
 Run the following commands.
 ```
 $ ./flow.tcl -interactive
@@ -270,56 +269,73 @@ These commands are used for reading the sky130_vsdinv.lef file
 ```
 ** Reading the design
 ![image](https://user-images.githubusercontent.com/110079770/187437201-8fc0450d-a698-4113-bb07-cc7739bc63b6.png)
-** Include the following the commands in the flow **
+
+**Include the following the commands in the flow **
+
 ![image](https://user-images.githubusercontent.com/110079770/187438660-ebb10bd2-f258-4a20-b8c5-d722879026ca.png)
 
 **Run_synthesis**
-Type the following command to run synthesis
+
+### Type the following command to run synthesis
 ```
 run_synthesis
 ```
+
 ![image](https://user-images.githubusercontent.com/110079770/187439015-10842717-996c-4828-a1bc-dc297aeb32c7.png)
 
 Printing Statistics
+
 **Pre Synthesis
+
 ![image](https://user-images.githubusercontent.com/110079770/187440049-2fa68e81-0cf4-422c-9b34-f6ce8a853d2e.png)
 
 **Post Synthesis
+
 ![image](https://user-images.githubusercontent.com/110079770/187439774-d9e9be3f-a339-4160-b340-261fa5bf1835.png)
 
 **Floorplan**
-Type the following command to run Floorplan
+
+### Type the following command to run Floorplan
+
 ```
 run_floorplan
 ```
 ![image](https://user-images.githubusercontent.com/110079770/187440482-eda3788f-8d89-4b45-a3c9-4b2572b32bd0.png)
 
 ### Floorplanning
+
 ![image](https://user-images.githubusercontent.com/110079770/187441458-e5c844b0-e7d4-41c0-be04-c99cd7b54f7e.png)
 
 **Placement**
+
 Type the following command to run placement
 ```
 run_placement
 ```
+
 ![image](https://user-images.githubusercontent.com/110079770/187442337-2f2f9caf-9fe2-4573-86e1-942e9ed2f538.png)
 
 ### placement
+
 ![image](https://user-images.githubusercontent.com/110079770/187443047-0d23f760-d020-41f5-ab41-1b5c880db491.png)
 
 **Routing**
-Type the following command to run placement
+
+### Type the following command to run placement
 ```
 run_routing
 ```
+
 ![image](https://user-images.githubusercontent.com/110079770/187443861-01522132-7365-4433-898b-d6458aeb702f.png)
 
 ### Routing 
+
 ![image](https://user-images.githubusercontent.com/110079770/187444680-d6c2ddf0-50fc-4009-b1ac-3f7dd61ea263.png)
 
 ![image](https://user-images.githubusercontent.com/110079770/187444869-01548792-0d75-4185-862a-ccff8cf25487.png)
 
 In tkcon terminal type the following command to know whether the cell is present or not
+
 ```getcell sky130_vsdinv
 ```
 
