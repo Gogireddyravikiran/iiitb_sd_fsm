@@ -25,7 +25,7 @@
  - [8. Floorplan](#8-Floorplan)
    - [8.1. Floorplanning](#81-Floorplanning)
  - [9. Placement](#9-Placement)
- - [10. CTS(clock tree synthesis)](#10-CTS(clock-tree-synthesis))
+ - [10. CTS](#10-CTS)
  - [11. Routing](#11-Routing)
    - [11.1. Routing](#111-Routing)
  - [12. Reports](#12-Reports)
@@ -388,7 +388,7 @@ run_placement
 
 ![image](https://user-images.githubusercontent.com/110079770/187443047-0d23f760-d020-41f5-ab41-1b5c880db491.png)
 
-## 10. CTS(clock tree synthesis)
+## 10. CTS
 Type the following command to run placement
 ```
 run_cts
