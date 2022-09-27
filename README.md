@@ -469,11 +469,16 @@ sky130_vsdinv _14_
 
 ## Power:
 
+power = 2.25uwatts
+
 ![power](https://user-images.githubusercontent.com/110079770/192548439-e9882fe1-1f79-4d1f-97f4-76f4a6933c9a.jpg)
 
 
 
 ## Area of the design :
+
+Area of the design = 1952.054um^2
+
 
 ![final layout_area](https://user-images.githubusercontent.com/110079770/192547915-c561fd02-b519-4cc3-b0a3-86e8e19451a6.jpg)
 
@@ -503,6 +508,8 @@ $ sta
 ```
 
 ## performace report :
+
+performance = 1.4953GHZ
 
 ![image](https://user-images.githubusercontent.com/110079770/192549800-e3208896-4b5e-4ada-98f4-669bd06f51a2.png)
 
