@@ -477,7 +477,25 @@ sky130_vsdinv _14_
 
 ![final layout_area](https://user-images.githubusercontent.com/110079770/192547915-c561fd02-b519-4cc3-b0a3-86e8e19451a6.jpg)
 
+```
+$ sudo make mount
+```
 
+
+```
+$ sta
+```
+
+```
+%	read_liberty -min /home/ravi/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v56.lib
+%	read_liberty -max /home/ravi/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v56.lib
+%	read_verilog /home/ravi/Desktop/OpenLane/pdks/sky130A/iiitb_pwm_gen.v
+%	link_design iiitb_pwm_gen
+%	read_sdc /home/ravi/Desktop/OpenLane/pdks/sky130A/iiitb_pwm_gen.sdc
+%	set_propagated_clock [all_clocks]
+%	report_checks
+% report_checks -from _37_(FlipFlop) -to _27_(FlipFlop)
+```
 
 ## performace report :
 
