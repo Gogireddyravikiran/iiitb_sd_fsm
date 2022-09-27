@@ -485,3 +485,33 @@ sky130_vsdinv _14_
 - GogiReddy Ravi Kiran Reddy, Postgraduate Student, International Institute of Information Technology, Bangalore.
 - Email: gogireddyravikiranreddy1@gmail.com
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
+
+
+
+
+
+
+
+## FlipFlop Stat:
+
+![flipflop_stat](https://user-images.githubusercontent.com/110079770/192548136-bd291ca5-942f-4b3f-ae52-3e08b1fd7822.jpg)
+
+## FlipFlop to Standard cell ratio:
+
+![flipflop_stat1](https://user-images.githubusercontent.com/110079770/192548307-ffa33212-afc7-4d4e-bd20-51d9bae86085.jpg)
+
+## Power:
+
+![power](https://user-images.githubusercontent.com/110079770/192548439-e9882fe1-1f79-4d1f-97f4-76f4a6933c9a.jpg)
+
+
+
+## Area of the design :
+
+![final layout_area](https://user-images.githubusercontent.com/110079770/192547915-c561fd02-b519-4cc3-b0a3-86e8e19451a6.jpg)
+
+
+
+## performace report :
+
+![image](https://user-images.githubusercontent.com/110079770/192549800-e3208896-4b5e-4ada-98f4-669bd06f51a2.png)
