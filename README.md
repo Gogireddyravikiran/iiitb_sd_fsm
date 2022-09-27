@@ -494,7 +494,12 @@ $ sta
 %	read_sdc /home/ravi/Desktop/OpenLane/pdks/sky130A/iiitb_pwm_gen.sdc
 %	set_propagated_clock [all_clocks]
 %	report_checks
+```
+
+```
+
 % report_checks -from _37_(FlipFlop) -to _27_(FlipFlop)
+
 ```
 
 ## performace report :
