@@ -492,7 +492,7 @@ sky130_vsdinv _14_
 
 
 
-## FlipFlop Stat:
+## FlipFlop Statistics:
 
 ![flipflop_stat](https://user-images.githubusercontent.com/110079770/192548136-bd291ca5-942f-4b3f-ae52-3e08b1fd7822.jpg)
 
